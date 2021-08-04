@@ -1,12 +1,11 @@
 script_name="NecrosCopy"
 script_description="Copy and fax things in the shadows while lines are splitting and breaking"
 script_author="reanimated"
-script_version="4.1"
+script_version="4.1.1"
 script_namespace="ua.NecrosCopy"
 
 local haveDepCtrl,DependencyControl,depRec=pcall(require,"l0.DependencyControl")
 if haveDepCtrl then
-	script_version="4.1.0"
 	depRec=DependencyControl{feed="https://raw.githubusercontent.com/TypesettingTools/unanimated-Aegisub-Scripts/master/DependencyControl.json"}
 end
 
@@ -46,7 +45,7 @@ function fucks(subs,sel)
 			endcom=""
 			repeat t=t:gsub("({[^}]-})%s*$",function(ec) endcom=ec..endcom return "" end)
 			until not t:match("}$")
-			t=t:gsub("(.)$","{\\fax"..faks2.."}%1")
+			t=re.sub(t, "(.)$","{\\\\fax"..faks2.."}\\1")
 			
 			if res.grad then
 				vis=nobra(t)

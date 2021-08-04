@@ -5,12 +5,11 @@ script_name="Hyperdimensional Relocator"
 script_description="Advanced metamorphosis of multidimensional coordinates"
 script_author="reanimated"
 script_url="http://unanimated.hostfree.pw/ts/relocator.lua"
-script_version="4.5"
+script_version="4.5.1"
 script_namespace="ua.Relocator"
 
 local haveDepCtrl,DependencyControl,depRec=pcall(require,"l0.DependencyControl")
 if haveDepCtrl then
-	script_version="4.5.0"
 	depRec=DependencyControl{feed="https://raw.githubusercontent.com/TypesettingTools/unanimated-Aegisub-Scripts/master/DependencyControl.json"}
 end
 
@@ -422,7 +421,7 @@ function positron(subs,sel)
 			endcom=""
 			repeat text=text:gsub("({[^}]-})%s*$",function(ec) endcom=ec..endcom return "" end)
 			until not text:match("}$")
-			text=text:gsub("(.)$","{\\fax"..faks2.."}%1")
+			text=re.sub(text, "(.)$","{\\\\fax"..faks2.."}\\1")
 			vis=nobra(text)
 			orig=text:gsub(STAG,"")
 			tg=text:match(STAG)

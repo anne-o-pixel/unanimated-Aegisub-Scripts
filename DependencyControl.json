@@ -209,19 +209,20 @@
       "description": "Advanced metamorphosis of multidimensional coordinates",
       "channels": {
         "master": {
-          "version": "4.5.0",
-          "released": "2018-08-05",
+          "version": "4.5.1",
+          "released": "2021-08-04",
           "default": true,
           "files": [
             {
               "name": ".lua",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "c1aa30d3af93c7f33f05841a37cd4f9e13c84951"
+              "sha1": "c419f8ba72d91971a07ba74077fe707abbca1436"
             }
           ]
         }
       },
       "changelog": {
+        "4.5.1": ["fix clip2fax compatibility with uft text"],
         "4.5.0": ["Check the Updates page"]
       }
     },
@@ -497,19 +498,20 @@
       "description": "Copy and Fax Things. Occasionally perform a necroscopy.",
       "channels": {
         "master": {
-          "version": "4.1.0",
-          "released": "2018-06-24",
+          "version": "4.1.1",
+          "released": "2021-08-04",
           "default": true,
           "files": [
             {
               "name": ".lua",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "b25234859bc304d941b4c0a70a38345f11a55a21"
+              "sha1": "494f2834bf159267a7d952182461132adac1570e"
             }
           ]
         }
       },
       "changelog": {
+        "4.1.1": ["fix clip2fax compatibility with uft text"],
         "4.1.0": ["Check the Updates page"]
       }
     },
