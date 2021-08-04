@@ -137,19 +137,20 @@
       "description": "Removes selected stuff from script",
       "channels": {
         "master": {
-          "version": "5.0.0",
-          "released": "2018-06-10",
+          "version": "5.0.1",
+          "released": "2021-08-04",
           "default": true,
           "files": [
             {
               "name": ".lua",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "43addccdac9a6a7bc85ded9450075edb767df5f3"
+              "sha1": "74c61c2a4b3c468bbd87ec68ff6eaf11a0b42763"
             }
           ]
         }
       },
       "changelog": {
+        "5.0.1": ["Cancer -> Cancel in GUI"],
         "5.0.0": ["Check the Updates page"]
       }
     },
